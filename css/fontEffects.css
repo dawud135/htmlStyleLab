@@ -1,0 +1,153 @@
+@font-face {
+font-family: LeagueGothicRegular;
+src: url("fonts/LeagueGothic.otf") format("opentype");
+}
+
+@font-face {
+font-family: ChunkFiveRegular;
+src: url("fonts/Chunkfive.otf") format("opentype");
+}
+
+@font-face {
+font-family: MisoRegular;
+src: url("fonts/miso.otf") format("opentype");
+}
+
+@font-face {
+font-family: BlackjackRegular;
+src: url("fonts/BlackjackRegular.ttf") format("opentype");
+}
+
+@font-face {
+font-family: RetroMonoRegular;
+src: url("fonts/Retro_Mono_Wide.ttf") format("opentype");
+}
+
+
+h1 {
+   text-shadow: -2px 2px 3px #ff2d95;
+}
+
+li {
+	padding: 1px 1px;
+}
+
+/*
+This is a very simple effect to achieve. To create the appearance of text that has been stamped, choose a text colour that is darker than the background, and then create a 1px text shadow with a 1px blur and offset it down 1px. Make the text-shadow slightly lighter than the background.
+*/
+#letterpress {
+	background-color: #474747;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+
+#letterpress h1 {
+   	text-shadow: 0px 3px 3px #595959;
+   	color: #222;
+   	font: 5em 'LeagueGothicRegular';
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+/*
+To make the Cloudy effect, first gave the text an rgba value of rgba(255,255,255,0) = completely transparent, and then built the 'Cloud' up from layers of varying transparency and blur.
+*/
+#cloud {	
+	background-color: #89D2FF;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+
+#cloud h1 {
+		text-shadow: 0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3);
+		color: rgba(255,255,255,0);
+		font: 5em 'ChunkFiveRegular';
+		margin-top: auto;
+		margin-bottom: auto;
+}
+
+/*
+To Create the Embossed look, use 2 diagonally offset shadows. One white shadow offset to the top left, and one black shadow offset to the bottom right. 
+Then the text was given a colour similar to the background image and the whole thing was given an opacity of 0.3 so that the background image could be seen through the text.
+*/
+#embossed {	
+	background-color: #B7A081;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+
+#embossed h1 {
+        text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+        color: #9c8468;
+        opacity: 0.3;
+        font: 5em 'ChunkFiveRegular';
+		margin-top: auto;
+		margin-bottom: auto;
+}
+
+/*
+This is built up from 8 shadows with no offset and increasing amounts of blur. 
+The first three shadows are white like the text, the remaining five shadows are all pink.
+*/
+#citylight {	
+	background-color: #030303;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+
+#citylight h1 {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+        letter-spacing: 5px;
+        font: 5em 'MisoRegular';
+}
+
+
+/*
+Three shadows - white, yellow, red - with increasing vertical offset and blur.
+*/
+#burning {	
+	background-color: #030303;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+#burning h1 {
+        color: #fff;
+        text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+        font: 5em 'BlackjackRegular';
+}
+
+/*
+Two diagonally offset shadows without blur. 
+The first shadow is exactly the same colour as the background, the second is a lighter shade of the background colour.
+*/
+#retro{	
+	background-color: #393D48;
+ 	text-align: center;
+	max-width: 70em; 	
+}
+
+#retro h1 {
+        color: #d7ceb2;
+        text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
+        font: 3em 'RetroMonoRegular';
+        letter-spacing: 10px;
+}
+
+/*
+Bold white text, with seven descending shadows, each has no blur and is an increasingly darker shade of grey. 
+The eighth shadow is dark-blue and blurred to enhance the overall effect.
+*/
+
+#three-d {	
+	background-color: #5383C5;
+ 	text-align: center;
+	max-width: 70em; 	
+
+}
+#three-d h1 {
+        color: #fff;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+        font: 5em 'ChunkFiveRegular';
+}
